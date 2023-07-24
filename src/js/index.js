@@ -4,9 +4,23 @@ import ReactDOM from "react-dom";
 
 // include your styles into the webpack bundle
 import "../styles/index.css";
+import reactDom from "react-dom";
 
-//import your own components
-import Home from "./component/home.jsx";
+import 'bootstrap';
 
-//render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+function SimpleCounter(props){
+    return (<div className="BigCounter">
+        <div className="Calendar">
+            <i className="fa-regular fa-clock"></i>
+        </div>
+        <div className="Four"></div>
+        <div className="Three"></div>
+        <div className="Two"></div>
+        <div className="One"></div>
+    </div>);
+}
+
+reactDom.render(
+    <SimpleCounter/>,
+    document.queryselector('#app')
+);
